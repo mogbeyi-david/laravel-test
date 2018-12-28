@@ -13,6 +13,11 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        return $request;
+        $newProduct = [
+            "name" => $request['name'],
+            "quantity_in_stock" => $request['quantity_in_stock'],
+            "price_per_item" => $request['price_per_item']
+        ];
+        return $newProduct;
     }
 }
