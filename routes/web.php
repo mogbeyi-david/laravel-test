@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('create-product', 'ProductController@create');
 
 Route::post('create-product', 'ProductController@store')->name('create-product');
+
+Route::get('test', 'ProductController@getExistingProducts');
