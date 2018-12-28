@@ -33,7 +33,7 @@
             <td>{{ $product->name }}</td>
             <td>{{ $product->quantity_in_stock }}</td>
             <td> {{$product->price_per_item }}</td>
-            <td> {{$product->created_at->date}}</td>
+            <td> {{ \Carbon\Carbon::parse($product->created_at->date) }}</td>
             <td> {{$product->quantity_in_stock * $product->price_per_item }}</td>
         </tr>
     @endforeach
