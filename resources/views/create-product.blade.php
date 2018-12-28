@@ -20,14 +20,13 @@
 
 @php $products = \GuzzleHttp\json_decode(Storage::get('products.json')); @endphp
 
-<table class="table">
+<table class="table" id="js-products-table">
     <tr>
         <th>Product Name</th>
         <th>Quantity In Stock</th>
         <th>Price Per Item</th>
         <th>Datetime submitted</th>
         <th>Total Value Number</th>
-        <th>Operation</th>
     </tr>
     @foreach($products as $product)
         <tr>
@@ -61,7 +60,7 @@
           price_per_item: jQuery('#price_per_item').val()
         },
         success: function(result){
-          console.log(result);
+          $('#js-products-table').append(`<tr><td>${result.name}</td><td>${result.quantity_in_stock}</td><td>${result.price_per_item}</td><td>${result.created_at.date}</td><td>${result.price_per_item * result.quantity_in_stock}</td></tr>`)
         }});
     });
   });
