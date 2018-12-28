@@ -2,6 +2,8 @@
 <head></head>
 <body>
 <form method="post" action="{{ URL::route('create-product') }}">
+    @csrf
+    <h3>Create New Product</h3>
     <div class="form-group">
         <input type="text" name="name" class="form-control" placeholder="Name">
     </div>
