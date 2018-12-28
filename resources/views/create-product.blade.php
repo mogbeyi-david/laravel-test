@@ -27,6 +27,7 @@
         <th>Price Per Item</th>
         <th>Datetime submitted</th>
         <th>Total Value Number</th>
+        <th>Operation</th>
     </tr>
     @foreach($products as $product)
         <tr>
