@@ -3,17 +3,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<form method="post" onsubmit="addProduct()">
+<form method="post">
     <h3>Create New Product</h3>
     <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
     <div class="form-group">
-        <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
     </div>
     <div class="form-group">
-        <input type="number" name="quantity_in_stock" id="quantity_in_stock" class="form-control" placeholder="Quantity in Stock">
+        <input type="number" name="quantity_in_stock" id="quantity_in_stock" class="form-control" placeholder="Quantity in Stock" required>
     </div>
     <div>
-        <input type="number" name="price_per_item"  id="price_per_item" class="form-control" placeholder="Price Per Item">
+        <input type="number" name="price_per_item"  id="price_per_item" class="form-control" placeholder="Price Per Item" required>
     </div>
     <button name="submit" class="btn btn-primary" id="js-create-product">Create Product</button>
 </form>
