@@ -1,7 +1,7 @@
 <html>
 <head></head>
 <body>
-<form>
+<form method="post" action="{{ URL::route('create-product') }}">
     <div class="form-group">
         <input type="text" name="name" class="form-control" placeholder="Name">
     </div>

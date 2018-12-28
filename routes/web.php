@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('create-product', function(){
-    return view('create-product');
-});
+Route::get('create-product', 'ProductController@create');
+
+Route::post('create-product', 'ProductController@store')->name('create-product');
