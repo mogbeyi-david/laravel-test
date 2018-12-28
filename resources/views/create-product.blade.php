@@ -1,5 +1,7 @@
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
 <body>
 <form method="post" action="{{ URL::route('create-product') }}">
     @csrf
@@ -18,7 +20,7 @@
 
 @php $products = \GuzzleHttp\json_decode(Storage::get('products.json')); @endphp
 
-<table>
+<table class="table">
     <tr>
         <th>Product Name</th>
         <th>Quantity In Stock</th>
